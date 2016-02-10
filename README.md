@@ -22,12 +22,19 @@ any time,
 
 Expected output:
 Step-by-step instructions (example):
+
 Action C1 (State) C2 (State)
+
 Initial state Empty Empty
+
 Fill C1 with V2 3L (0%) Empty
+
 Transfer C1 content to C2 Empty 3L (0%)
+
 Fill C1 with V1 3L (100%) 3L (0%)
+
 Transfer C1 content to C2 1L (100%) 5L (40%)
+
 Purge C1 Empty 5L (40%)
 
 Acceptance criteria:
