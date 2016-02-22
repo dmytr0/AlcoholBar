@@ -1,7 +1,7 @@
 package com.lemon.wifibar;
 
 
-import com.lemon.wifibar.Controller.Manager;
+import com.lemon.wifibar.AlcoholController.Manager;
 import com.lemon.wifibar.Model.Canister;
 import com.lemon.wifibar.Model.Liquid;
 
