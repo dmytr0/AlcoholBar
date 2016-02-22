@@ -12,7 +12,7 @@ public class Bar {
     BigDecimal c2 = new BigDecimal("5");
     Liquid v1 = new Liquid(BigDecimal.valueOf(Double.MAX_VALUE),new BigDecimal("100"));
     Liquid v2 = new Liquid(BigDecimal.valueOf(Double.MAX_VALUE),new BigDecimal("0"));
-    AlcoholController mng = new AlcoholController();
+    AlcoholController alcoholController = new AlcoholController();
 
     public void openBar(){
         Canister canister3 = new Canister(c1, new Liquid(new BigDecimal("0"),new BigDecimal("0")));
@@ -22,25 +22,25 @@ public class Bar {
         System.out.println("----------------------------------------|-------------------");
         System.out.println("Init state                              | " + canister3 + "     -  " + canister5);
 
-        mng.append(canister3, v1);
+        alcoholController.append(canister3, v1);
         System.out.println("Fill canister3 whith V1                 | " + canister3 + " -  " + canister5);
 
-        mng.transfuse(canister3, canister5);
+        alcoholController.transfuse(canister3, canister5);
         System.out.println("Transfer canister3 content to canister5 | " + canister3 + "     -  " + canister5);
 
-        mng.append(canister3, v2);
+        alcoholController.append(canister3, v2);
         System.out.println("Fill canister3 whith V2                 | " + canister3 + "   -  " + canister5);
 
-        mng.transfuse(canister3, canister5);
+        alcoholController.transfuse(canister3, canister5);
         System.out.println("Transfer canister3 content to canister5 | " + canister3 + "   -  " + canister5);
 
-        mng.transfuse(canister5, canister3);
+        alcoholController.transfuse(canister5, canister3);
         System.out.println("Transfer canister5 content to canister3 | " + canister3 + "  -  " + canister5);
 
-        mng.transfuse(canister3, canister5);
+        alcoholController.transfuse(canister3, canister5);
         System.out.println("Transfer canister3 content to canister5 | " + canister3 + "  -  " + canister5);
 
-        mng.pourOut(canister5);
+        alcoholController.pourOut(canister5);
         System.out.println("Purge canister5                         | " + canister3 + "  -  " + canister5 );
     }
 
