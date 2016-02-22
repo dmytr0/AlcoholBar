@@ -1,24 +1,15 @@
-package com.lemon.wifibar;
+package com.lemon.wifibar.Model;
 
 import java.math.BigDecimal;
 
 public class Liquid {
 
-    BigDecimal volume = new BigDecimal("0.0");
-    BigDecimal alcoholic = new BigDecimal("0.0");
+    BigDecimal volume;
+    BigDecimal alcoholic;
 
     public Liquid(BigDecimal volume, BigDecimal alcoholic) {
         this.volume = volume;
         this.alcoholic = alcoholic;
-    }
-
-    public void mix(Liquid second) {
-        BigDecimal tmpVolume =  volume.add(second.volume);
-        if(second.volume.compareTo(BigDecimal.ZERO)>0) {
-            alcoholic = volume.multiply(alcoholic).add(second.volume.multiply(second.alcoholic)).divide(tmpVolume);
-            second.setVolume(new BigDecimal("0"));
-            volume = tmpVolume;
-        }
     }
 
     @Override
@@ -46,4 +37,7 @@ public class Liquid {
         return alcoholic;
     }
 
+    public void setAlcoholic(BigDecimal alcoholic) {
+        this.alcoholic = alcoholic;
+    }
 }
