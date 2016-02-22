@@ -23,31 +23,24 @@ public class Bar {
         System.out.println("Init state                              | " + canister3 + "     -  " + canister5);
 
         mng.append(canister3, v1);
-        //canister3.append(v1);
         System.out.println("Fill canister3 whith V1                 | " + canister3 + " -  " + canister5);
 
         mng.transfuse(canister3, canister5);
-        //canister5.transfuse(canister3);
         System.out.println("Transfer canister3 content to canister5 | " + canister3 + "     -  " + canister5);
 
         mng.append(canister3, v2);
-        //canister3.append(v2);
         System.out.println("Fill canister3 whith V2                 | " + canister3 + "   -  " + canister5);
 
         mng.transfuse(canister3, canister5);
-        //canister5.transfuse(canister3);
         System.out.println("Transfer canister3 content to canister5 | " + canister3 + "   -  " + canister5);
 
         mng.transfuse(canister5, canister3);
-        //canister3.transfuse(canister5);
         System.out.println("Transfer canister5 content to canister3 | " + canister3 + "  -  " + canister5);
 
         mng.transfuse(canister3, canister5);
-        //canister5.transfuse(canister3);
         System.out.println("Transfer canister3 content to canister5 | " + canister3 + "  -  " + canister5);
 
         mng.pourOut(canister5);
-        //canister5.pourOut();
         System.out.println("Purge canister5                         | " + canister3 + "  -  " + canister5 );
     }
 
