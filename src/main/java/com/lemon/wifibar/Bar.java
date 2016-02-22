@@ -1,7 +1,7 @@
 package com.lemon.wifibar;
 
 
-import com.lemon.wifibar.AlcoholController.Manager;
+import com.lemon.wifibar.Controller.AlcoholController;
 import com.lemon.wifibar.Model.Canister;
 import com.lemon.wifibar.Model.Liquid;
 
@@ -12,7 +12,7 @@ public class Bar {
     BigDecimal c2 = new BigDecimal("5");
     Liquid v1 = new Liquid(BigDecimal.valueOf(Double.MAX_VALUE),new BigDecimal("100"));
     Liquid v2 = new Liquid(BigDecimal.valueOf(Double.MAX_VALUE),new BigDecimal("0"));
-    Manager mng = new Manager();
+    AlcoholController mng = new AlcoholController();
 
     public void openBar(){
         Canister canister3 = new Canister(c1, new Liquid(new BigDecimal("0"),new BigDecimal("0")));

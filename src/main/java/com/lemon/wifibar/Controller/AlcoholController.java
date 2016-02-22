@@ -1,4 +1,4 @@
-package com.lemon.wifibar.AlcoholController;
+package com.lemon.wifibar.Controller;
 
 
 import com.lemon.wifibar.Model.Canister;
@@ -6,7 +6,7 @@ import com.lemon.wifibar.Model.Liquid;
 
 import java.math.BigDecimal;
 
-public class Manager {
+public class AlcoholController {
 
     public void append(Canister to, Liquid from){
         BigDecimal currentVolume = to.getLiquid().getVolume();
